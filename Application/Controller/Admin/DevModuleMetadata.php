@@ -212,7 +212,8 @@ class DevModuleMetadata extends \OxidEsales\Eshop\Application\Controller\Admin\A
 
             // update yaml config files
             $moduleConfigurationInstallerService = $container->get(ModuleConfigurationInstallerInterface::class);
-            $moduleConfigurationInstallerService->install($oModule->getModuleFullPath(), $oModule->getModuleFullPath());
+            $modulePath = $this->getCorrectedPath($oModule);
+            $moduleConfigurationInstallerService->install($modulePath, $modulePath);
 
             // update cached metadata in database
             //$moduleConfigurationDao = $container->get(ModuleConfigurationDaoInterface::class);
@@ -251,5 +252,15 @@ class DevModuleMetadata extends \OxidEsales\Eshop\Application\Controller\Admin\A
             Registry::getLogger()->error($exception->getMessage(), [$exception]);
             //die("MESSAGE_REACTIVATION_FAILED");
         }
+    }
+
+    private function getCorrectedPath($oModule) {
+        $modulePath = str_replace('../', '', $oModule->getModuleFullPath());
+        $search = 'shop/source/modules/';
+        $pos = strpos($modulePath, $search);
+        if ($pos !== false) {
+            $modulePath = substr_replace($modulePath, '', $pos, strlen($search));
+        }
+        return $modulePath;
     }
 }
