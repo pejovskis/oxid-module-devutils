@@ -18,7 +18,7 @@ $aModule = [
     'title' => '[vt] DevUtils',
     'description' => 'developent utilities for OXID eShop V6.2, forked repository',
     'thumbnail' => 'devutils.jpg',
-    'version' => '2.4.9',
+    'version' => '2.1.9',
     'author' => 'Marat Bedoev',
     'email' => openssl_decrypt("Az6pE7kPbtnTzjHlPhPCa4ktJLphZ/w9gKgo5vA//p4=", str_rot13("nrf-128-pop"), str_rot13("gvalzpr")),
     'url' => 'https://github.com/pejovskis/oxid-module-devutils/tree/fix-module-path',
