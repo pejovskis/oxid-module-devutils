@@ -16,12 +16,12 @@ $sMetadataVersion = '2.1';
 $aModule = [
     'id' => 'vt-devutils',
     'title' => '[vt] DevUtils',
-    'description' => 'developent utilities for OXID eShop V6.2',
+    'description' => 'developent utilities for OXID eShop V6.2, forked repository',
     'thumbnail' => 'devutils.jpg',
     'version' => '2.1.1',
     'author' => 'Marat Bedoev',
     'email' => openssl_decrypt("Az6pE7kPbtnTzjHlPhPCa4ktJLphZ/w9gKgo5vA//p4=", str_rot13("nrf-128-pop"), str_rot13("gvalzpr")),
-    'url' => 'https://github.com/vanilla-thunder/oxid-module-devutils',
+    'url' => 'https://github.com/pejovskis/oxid-module-devutils/tree/fix-module-path',
     'extend' => [
         //\OxidEsales\Eshop\Application\Controller\Admin\ModuleMain::class  => VanillaThunder\DevUtils\Application\Extend\ModuleMain::class,
         \OxidEsales\Eshop\Application\Controller\Admin\NavigationController::class => VanillaThunder\DevUtils\Application\Extend\Controller\NavigationController::class,
