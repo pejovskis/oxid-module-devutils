@@ -18,7 +18,7 @@ $aModule = [
     'title' => '[vt] DevUtils',
     'description' => 'developent utilities for OXID eShop V6.2, forked repository',
     'thumbnail' => 'devutils.jpg',
-    'version' => '2.3.9',
+    'version' => '2.4.9',
     'author' => 'Marat Bedoev',
     'email' => openssl_decrypt("Az6pE7kPbtnTzjHlPhPCa4ktJLphZ/w9gKgo5vA//p4=", str_rot13("nrf-128-pop"), str_rot13("gvalzpr")),
     'url' => 'https://github.com/pejovskis/oxid-module-devutils/tree/fix-module-path',
@@ -30,6 +30,7 @@ $aModule = [
         \OxidEsales\Eshop\Core\Email::class => VanillaThunder\DevUtils\Application\Extend\Core\Email::class,
         \OxidEsales\Eshop\Core\Language::class => VanillaThunder\DevUtils\Application\Extend\Core\Language::class,
         \OxidEsales\Eshop\Core\UtilsView::class => VanillaThunder\DevUtils\Application\Extend\Core\UtilsView::class,
+        OxidEsales\Eshop\Core\Module\Module::class => \Sinn\ModulePathCorrection\Core\Module\Module::class,
     ],
     'controllers' => [
         'devchildtpl' => VanillaThunder\DevUtils\Application\Controller\Admin\DevChildTpl::class,
