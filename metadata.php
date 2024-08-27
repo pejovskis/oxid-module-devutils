@@ -30,7 +30,7 @@ $aModule = [
         \OxidEsales\Eshop\Core\Email::class => VanillaThunder\DevUtils\Application\Extend\Core\Email::class,
         \OxidEsales\Eshop\Core\Language::class => VanillaThunder\DevUtils\Application\Extend\Core\Language::class,
         \OxidEsales\Eshop\Core\UtilsView::class => VanillaThunder\DevUtils\Application\Extend\Core\UtilsView::class,
-        OxidEsales\Eshop\Core\Module\Module::class => \Sinn\ModulePathCorrection\Core\Module\Module::class,
+        OxidEsales\Eshop\Core\Module\Module::class => VanillaThunder\DevUtils\Application\Core\Module\Module::class,
     ],
     'controllers' => [
         'devchildtpl' => VanillaThunder\DevUtils\Application\Controller\Admin\DevChildTpl::class,

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sinn\ModulePathCorrection\Core\Module;
+namespace VanillaThunder\DevUtils\Application\Core\Module;
 
 use OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ShopConfigurationDaoBridgeInterface;
 use OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\DataObject\ShopConfiguration;
